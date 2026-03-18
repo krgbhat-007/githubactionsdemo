@@ -1,0 +1,11 @@
+name: 08 - Update Workflow
+
+on:
+  push:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Workflow updated and triggered automatically"

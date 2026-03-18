@@ -1,0 +1,19 @@
+name: 07 - Parallel Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: [self-hosted]
+    steps:
+      - run: |
+          echo "Job1 running on $(hostname)"
+          sleep 15
+
+  job2:
+    runs-on: [self-hosted]
+    steps:
+      - run: |
+          echo "Job2 running on $(hostname)"
+          sleep 15

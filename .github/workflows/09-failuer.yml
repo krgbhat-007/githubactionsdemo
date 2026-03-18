@@ -1,0 +1,16 @@
+name: 09 - Failure Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Starting job"
+
+      - name: Fail step
+        run: exit 1
+
+      - run: echo "This will not run"

@@ -1,0 +1,13 @@
+name: 05 - Self Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  self-hosted:
+    runs-on: [self-hosted]
+
+    steps:
+      - run: |
+          echo "Running on self-hosted runner"
+          hostname

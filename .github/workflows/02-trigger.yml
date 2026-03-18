@@ -1,0 +1,12 @@
+name: 02 - Trigger Demo
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  trigger-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Triggered by event"

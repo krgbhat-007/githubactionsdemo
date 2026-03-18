@@ -1,0 +1,13 @@
+name: 04 - GitHub Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  github-runner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo "Running on GitHub-hosted runner"
+          hostname

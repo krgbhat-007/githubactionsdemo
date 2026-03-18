@@ -1,0 +1,15 @@
+name: 03 - Marketplace Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  marketplace:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout using marketplace action
+        uses: actions/checkout@v3
+
+      - name: List Files
+        run: ls -l

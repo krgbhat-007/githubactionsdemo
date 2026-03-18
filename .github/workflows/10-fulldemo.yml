@@ -1,0 +1,28 @@
+name: 10 - Full Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: [self-hosted]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Show System
+        run: |
+          echo "Runner: $RUNNER_NAME"
+          hostname
+
+      - name: Use Secret
+        run: echo "Secret is ${{ secrets.DEMO_SECRET }}"
+
+      - name: Build
+        run: echo "Building..."
+
+      - name: Test
+        run: echo "Testing..."
+
+      - name: Done
+        run: echo "Completed"
