@@ -1,7 +1,6 @@
 name: Self Hosted Runner Demo
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
@@ -13,7 +12,7 @@ jobs:
         run: |
           echo "Running parallel job on $(hostname)"
           sleep 10
-          
+
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -31,6 +30,9 @@ jobs:
 
       - name: List Files
         run: ls -l
+      
+      - name: Use Secret
+        run: echo "Secret value is ${{ secrets.DEMO_SECRET }}"
 
       - name: Simulate Build
         run: |
