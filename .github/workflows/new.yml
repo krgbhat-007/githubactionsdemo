@@ -1,0 +1,43 @@
+name: Self Hosted Runner Demo
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Show System Info
+        run: |
+          echo "===== GitHub Actions Self-Hosted Runner ====="
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Machine Name:"
+          hostname
+          echo "Operating System:"
+          uname -a
+          echo "Current User:"
+          whoami
+          echo "============================================"
+
+      - name: List Files
+        run: ls -l
+
+      - name: Simulate Build
+        run: |
+          echo "Building application..."
+          sleep 5
+          echo "Build completed!"
+
+      - name: Simulate Test
+        run: |
+          echo "Running tests..."
+          sleep 5
+          echo "Tests passed!"
+
+      - name: Final Message
+        run: echo "Pipeline executed on self-hosted runner successfully!"
