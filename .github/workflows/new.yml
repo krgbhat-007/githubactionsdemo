@@ -1,8 +1,8 @@
 name: Self Hosted Runner Demo
 
 on:
-  push:
-  # workflow_dispatch:
+  # push:
+  workflow_dispatch:
 
 jobs:
   build:
