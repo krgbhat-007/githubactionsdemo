@@ -1,8 +1,8 @@
 name: Self Hosted Runner Demo
 
 on:
-  # push:
-  workflow_dispatch:
+  push:
+  # workflow_dispatch:
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
           echo "============================================"
 
       - name: List Files
-        run: ls -al
+        run: ls -l
       
       - name: Use Secret
         run: echo "Secret value is ${{ secrets.DEMO_SECRET }}"
