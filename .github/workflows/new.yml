@@ -30,7 +30,7 @@ jobs:
           echo "============================================"
 
       - name: List Files
-        run: ls -l
+        run: ls -al
       
       - name: Use Secret
         run: echo "Secret value is ${{ secrets.DEMO_SECRET }}"
